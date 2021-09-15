@@ -1,15 +1,15 @@
 
-# Overview
+## Overview
 
 ![](01_DevOps.PNG)
 
-## [Understanding DevOps](#understanding-devops)
+### [Understanding DevOps](#understanding-devops)
 
 DevOps is a cultural and professional movement that stresses **communication, collaboration** and **integration between software developers and IT operations professionals** while **automating** the process of software delivery and infrastructure changes.
 
 To better understand the DevOps culture, you can also refer to <a href="https://gccprod-my.sharepoint.com/:b:/g/personal/koh_keng_hun_tech_gov_sg/EeH7x96f2L5HifWjEuawt3IBBnFmDC40cu5C2l9wgl7QFA?e=aMIBMd">CAMS model</a> developed by Damon Edwards and John Willis, authors of the famous Podcast DevOps Cafe.CAMS stands for Culture, Automation, Measurement and Sharing. These are all important principles in implementing DevOps.
 
-## Introducing DevSecOps
+### Introducing DevSecOps
 
 If DevOps entails automation and collaboration of Development (Dev) and Operations (Ops) processes,DevSecOps goes a step further - driving the adoption of Security (Sec) measures. The collaboration between Dev and Ops is a more natural one, whereas Dev and Sec teams typically had contending objectives. Development is geared towards being agile and executing frequent releases, while Security with its auditing and vulnerabilities tracking by nature, inadvertently holds back development.
 
@@ -19,7 +19,7 @@ Incorporate security right from the beginning in the DevOps journey. When securi
 
 Hence, we have a three-way hybrid called DevSecOps which inserts security into the DevOps team, and hands over responsibility for the automation of security tools and their integration into the Software Development Life Cycle (SDLC).
 
-## Elements of DevSecOps - Continuous Integration &amp; Continuous Delivery
+### Elements of DevSecOps - Continuous Integration &amp; Continuous Delivery
 
 ![](02_CiCD.PNG)
 
@@ -31,7 +31,7 @@ The two important elements in DevSecOps are - Continuous Integration &amp; Conti
 
 This playbook will share more practical best practices on CI/CD.
 
-## Maturity Model for Agencies
+### Maturity Model for Agencies
 
 ![](03-DevSecOps-Maturity-Model.png)
 
@@ -43,7 +43,7 @@ This is a natural progression model in DevSecOps maturity. Every agency is diffe
 
 You can see how DevSecOps sub-domains map with the DevSecOps maturity model. For example, Development sub-domain is mapped to the Source Code Management while Build &amp; Test sub-domain is related to the Continuous Integration and so forth.
 
-## Playbook Structure
+### Playbook Structure
 
 **Note:** There are some hyperlinks to the intranet, and these are meant only for Singapore Government Public Officers.
 
@@ -119,7 +119,7 @@ If vendors are unable to use the centrally managed code repo in SGTS for any of 
 
 <sup><i>[1] Source Code Management Mandate - All new and existing GovTech owned systems shall adopt SHIP-HATS for source code management by October FY22 and this was approved by GovTech IDSC in May 2021.</i></sup>
 
-### Version control [#7.1/S1]
+## Version control [#7.1/S1]
 
 Every commit in the code repository that is released to production must be tagged with the version number and should have the supporting logs or commit history, so it is easy to see the changes that were released to production.
 
