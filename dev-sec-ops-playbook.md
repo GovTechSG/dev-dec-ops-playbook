@@ -7,7 +7,7 @@
 
 DevOps is a cultural and professional movement that stresses **communication, collaboration** and **integration between software developers and IT operations professionals** while **automating** the process of software delivery and infrastructure changes.
 
-To better understand the DevOps culture, you can also refer to [CAMS model](https://gccprod-my.sharepoint.com/:b:/g/personal/koh_keng_hun_tech_gov_sg/EeH7x96f2L5HifWjEuawt3IBBnFmDC40cu5C2l9wgl7QFA?e=aMIBMd) developed by Damon Edwards and John Willis, authors of the famous Podcast DevOps Cafe.CAMS stands for Culture, Automation, Measurement and Sharing. These are all important principles in implementing DevOps.
+To better understand the DevOps culture, you can also refer to <a href="https://gccprod-my.sharepoint.com/:b:/g/personal/koh_keng_hun_tech_gov_sg/EeH7x96f2L5HifWjEuawt3IBBnFmDC40cu5C2l9wgl7QFA?e=aMIBMd">CAMS model</a> developed by Damon Edwards and John Willis, authors of the famous Podcast DevOps Cafe.CAMS stands for Culture, Automation, Measurement and Sharing. These are all important principles in implementing DevOps.
 
 ## Introducing DevSecOps
 
