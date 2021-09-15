@@ -1,7 +1,7 @@
 # DevSecOps Playbook
 
 # Overview
-![](01_DevOps.PNG)
+![](01-devops.png)
 
 ## Understanding DevOps
 DevOps is a cultural and professional movement that stresses **communication, collaboration** and **integration between software developers and IT operations professionals** while **automating** the process of software delivery and infrastructure changes.
@@ -20,7 +20,7 @@ Hence, we have a three-way hybrid called DevSecOps which inserts security into t
 
 ## Elements of DevSecOps - Continuous Integration &amp; Continuous Delivery
 
-![](02_CiCD.PNG)
+![](02-cicd.png)
 
 The two important elements in DevSecOps are - Continuous Integration &amp; Continuous Delivery.
 
