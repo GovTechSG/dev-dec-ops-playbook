@@ -1,1 +1,1 @@
-* [DevSecOps Playbook](dev-sec-ops-playbook)
+* [DevSecOps Playbook](devsecops-playbook)
