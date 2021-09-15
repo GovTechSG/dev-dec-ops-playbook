@@ -3,7 +3,7 @@
 
 ![](01_DevOps.PNG)
 
-### [Understanding DevOps](#understanding-devops)
+### Understanding DevOps
 
 DevOps is a cultural and professional movement that stresses **communication, collaboration** and **integration between software developers and IT operations professionals** while **automating** the process of software delivery and infrastructure changes.
 
@@ -37,7 +37,7 @@ This playbook will share more practical best practices on CI/CD.
 
 This is a natural progression model in DevSecOps maturity. Every agency is different and the pace of implementing DevSecOps also varies. This model serves to guide agencies to navigate up the maturity model depending on their current state.
 
-## Maturity Model &amp; DevSecOps Policy
+### Maturity Model &amp; DevSecOps Policy
 
 ![](04-DevSecOps-Maturity-Model-Policy.png)
 
