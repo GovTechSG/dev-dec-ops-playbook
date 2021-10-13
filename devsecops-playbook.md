@@ -259,12 +259,12 @@ Choose software frameworks for your programming language with the following sugg
 - Take note of the software license for the framework. Make sure it is appropriate for your project and can be used in accordance with their license policy.
 
 
-### Third Party/Open Source Libraries
+### Third Party or Open Source Libraries
 
-When using third party/open source libraries for your application, take note of the following suggested guidelines
+Some suggested guidelines when using third party/open source libraries for your application
 
-- Make sure that the versions of these libraries or packages are explicitly declared (i.e version locked). Some package managers such as `npm` for NodeJS already offer such capabilities by default, while others such as `pip` for Python require additional configuration or tools
-- When downloading these libraries or packages, it is recommended to download through a hosted repository manager such as the one offered in SHIP-HATS. A hosted repository manager can help to cache and speed up downloads, and also ensures the security of the downloaded packages by verifying checksums. It can also flag out known vulnerabilities for the libraries if any
+- Make sure that the versions of third party or open source libraries or packages are explicitly declared (i.e. version locked). Some package managers such as `npm` for NodeJS offer such capabilities by default, while others such as `pip` for Python require additional configuration or tools.
+- When downloading the libraries or packages, it is recommended to use a hosted repository manager such as the one offered in SHIP-HATS. A hosted repository manager helps to cache and speed up downloads, ensures the security of the downloaded packages by verifying checksums and flags out any known vulnerabilities for the libraries.
 
 
 ### Other practices to consider
