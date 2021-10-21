@@ -347,7 +347,7 @@ In this section we will look at the best practices for testing before a producti
 ## Testing Set Up
 
 - [Test environments](#test-environments)
-- [Automated testing](#automated-testing)
+- <a name="automating-testing">Automating testing</a>
 - [Review triage](#review-triage)
 - [Role separation](#role-separation)
 
@@ -365,7 +365,7 @@ Agency should consider establishing minimally two test environments:
   - Load &amp; performance testing
   - Accessibility testing
 
-## <a name="automated-testing">Automating testing</a>
+## <a name="automating-testing">Automating testing</a>
 
 - As mentioned in [Stage 2: Development – Version Control](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=version-control-71s1), the automated test cases and scripts should be stored in the respective central repositories such as SHIP-HATS, similar to how you maintain the codebase.
 - [Peer-review](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=code-merge-71s2-81g3) is recommended for QA engineers to review each other&#39;s test cases and scripts.
