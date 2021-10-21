@@ -346,12 +346,12 @@ In this section we will look at the best practices for testing before a producti
 
 ## Testing Set Up
 
-- [Test environments](#test-environments)
-- <a name="automating-testing">Automating testing</a>
-- [Review triage](#review-triage)
-- [Role separation](#role-separation)
+- Test environments
+- Automating testing
+- Review triage
+- Role separation
 
-## [Test environments](#test-environments)
+## Test environments
 
 Agency should consider establishing minimally two test environments:
 
@@ -365,14 +365,13 @@ Agency should consider establishing minimally two test environments:
   - Load &amp; performance testing
   - Accessibility testing
 
-## <a name="automating-testing">Automating testing</a>
+### Automating testing[#9.1/G1]
 
 - As mentioned in [Stage 2: Development – Version Control](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=version-control-71s1), the automated test cases and scripts should be stored in the respective central repositories such as SHIP-HATS, similar to how you maintain the codebase.
 - [Peer-review](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=code-merge-71s2-81g3) is recommended for QA engineers to review each other&#39;s test cases and scripts.
 - Agencies can use those repositories to run automation and security tests in a CI pipeline.
 
-## <a name="review-triage">Review triage[#9.1/G3]</a>
-
+### Review triage[#9.1/G3]
 The automated and manual testing should be followed by a review triage. In this process, the development team looks into the test scan or reports with Application Security Engineer and includes the following
 
 - Assess if the issues are &quot;Confirmed&quot; or &quot;False positives&quot;
@@ -381,7 +380,7 @@ The automated and manual testing should be followed by a review triage. In this 
 - Assess the severity and build a mitigation plan. We highly encourage to address issues assigned as high and medium severity as priority before tackling on those tagged as low severity.
 - Repeat this review triage in every sprint or after every test cycle.
 
-## <a name="role-separation">Role separation[#9.1/G4]</a>
+### Role separation[#9.1/G4]
 
 Here are the recommended roles for different quality checks ensuring there is no conflict of interest:
 
@@ -391,28 +390,28 @@ Here are the recommended roles for different quality checks ensuring there is no
 
 All these processes are moderated by tools such as CODEOWNER which are used to enforce the role separation. CODEOWNER automates code review requests when a developer submits a pull request.
 
-# Three Types of Testing
+## Three Types of Testing
 
-- [Security Testing](#security-testing)
-- [Functional Regression Testing](#functional-regression-testing)
-- [Load & Performance Testing](#load-performance-testing)
+- Security Testing
+- Functional Regression Testing
+- Load & Performance Testing
 
-## <a name="security-testing">Security Testing[#9.1/1]</a>
+### Security Testing[#9.1/S1]
 
 Security testing uncovers vulnerabilities, threats and risks in an application and its infrastructure and makes the system more resilient to malicious attacks. Security testing types include dynamic application security testing (DAST), vulnerability assessment and penetration testing.
 
-### Dynamic Application Security Testing (DAST)
+#### Dynamic Application Security Testing (DAST)
 
 - We highly recommend using DAST tool within SHIP-HATS that is preconfigured for OWASP Top 10 standards which is industry standard.
 - DAST is recommended for stable and bug-free test environment.
 - Product Owner can create a user story for DAST to be conducted on a weekly basis or at the end of each sprint. This ensures security vulnerabilities are flagged earlier in the software development life cycle.
 - DAST may not be relevant for commercial-off-the-shelf (COTS) products or software-as-a-service (SaaS) tools.
 
-### Penetration testing [#4.1/S1 - S8]
+#### Penetration testing [#4.1/S1 - S8]
 
 Agencies are required to conduct penetration tests for new and existing systems. Public officers can refer to the [IM8](https://intranet.mof.gov.sg/portal/IM/Themes/IT-Management/Security/Topics/Application-Development-Security.aspx) domain on Application Development Security (Standards Clauses following Policy Clause 4.1) for the guidelines, scope and frequency on performing penetration testing.
 
-## <a name="functional-regression-testing">Functional Regression Testing[#9.1/S2]</a>
+### Functional Regression Testing[#9.1/S2]
 
 Functional regression testing ensures the new and previously developed features are working as expected. We highly recommend automating regression testing using Selenium and Appium based frameworks which are supported by SHIP-HATS.
 
@@ -437,7 +436,7 @@ Acceptance criteria in a user story only covers the test cases related to the st
 
 End-to-end test cases and the initial regression suite forms the full regression suite. The full regression suite can be executed daily after office hours, to make sure all developed and tested features continue to work as expected. Combined with automated security test cases (if any), this regression suite forms the baseline test. Agency can then define the exit criteria for deploying to higher environments such as staging or production.
 
-## <a name="load-performance-testing">Load & Performance Testing</a>
+### Load & Performance Testing
 
 Load & performing testing identifies bottlenecks in the system and establishes a load baseline for capacity planning. It is recommended for the staging environment and the underlying infrastructure should be similar to production to obtain a conclusive result.
 
