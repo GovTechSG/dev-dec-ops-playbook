@@ -444,7 +444,7 @@ Performance Testing checks if the application response is within the range defin
 
 The performance test results will provide information on system throughput, response time, server utilisation such as CPU and memory. The team can identify the performance bottlenecks of the application by analysing the performance test results against the server logs generated and plan for mitigation.
 
-# Other Test Types
+## Other Test Types
 
 Following are the optional tests agencies can consider based on their needs and resources available.
 
