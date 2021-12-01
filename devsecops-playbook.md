@@ -454,3 +454,114 @@ Following are the optional tests agencies can consider based on their needs and 
 | Migration testing | Verifies data integrity and ensures there is no data loss from legacy to new system during migration. |
 | Disaster Recovery (DR) testing | Public Officers can refer to [DR Test Plan](https://intranet.mof.gov.sg/portal/getattachment/8a76a670-a486-4faf-a442-6e0d8a2ab381/attachment.aspx)[template](https://intranet.mof.gov.sg/portal/getattachment/8a76a670-a486-4faf-a442-6e0d8a2ab381/attachment.aspx) in the intranet. |
 | Chaos testing | Ensures system works and defines a steady state by continuously, but randomly injecting failures in the production system to test the integrity and resiliency of the system and environment. |
+
+# Stage 5: Deployment and Release
+
+In this section we will look at the best practices on deployment and release safeguards, including the strategies.
+
+## Safeguards [#10.1/S1, G1]
+
+### Automate DevOps processes
+
+If you have read this playbook so far, you would understand that automating DevOps is fundamental to a secure and good quality development.
+
+- **Practicing Shift Left:** Agency should use automated tools for source code analysis, configuration management, patching and deployment, and secrets management as it minimises the risk of human error which can lead to deployment downtime, as well as potential security breaches. Using automated tools enable the &#39;Shift Left&#39; practice that identifies and prevents defects early in the software delivery process. If an agency doesn&#39;t have automated tools, they should ensure that their pipelines are manually reviewed by a release manager before proceeding to deployment. Refer to [Development](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-2-development-code), [Building and Packaging](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-3-building-and-packaging) and [Pre-release Testing](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-4-pre-release-testing) chapters on how SHIP-HATS supports automation.
+- **Reducing Downtime:** Automating your deployments can also prevent unnecessary downtime since you can rollback based on the previous successful pipeline. Refer to [versioning](https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=version-control-71s1) on how to use it to manage different versions of an application.
+
+### Handle secrets securely within a pipeline
+
+- **Storing Secrets:** Do not hardcode secrets as plaintext within code, scripts, files, or service accounts. Minimally, inject secrets using CI variables and mark them as sensitive and write-only. This ensures that no one can view the contents of secrets, including those with view permissions to the pipelines and prevents contents of secrets from appearing in the build logs.
+- **Rotation:** Agencies are strongly encouraged to rotate secrets periodically (between 6 - 12 months). Most of the leading cloud providers support automatic rotation of secrets. Alternatively, agencies can use a central secrets management service offered by GIG for a customised solution.
+
+### Understand Identity and Access Management (IAM)
+
+- **Least Privileged Model:** Enforce least privilege access rights to reduce the risk of internal or external attackers running bad code or gaining unauthorised access to cloud resources. Only designated personnel such as DevOps or Automation Engineers should have privileged access to create, edit, delete, and run deployment plans based on their deployment model. Only designated release managers should have the permission to approve deployment in production environment. Consider creating a service account with least privilege access rights when handling deployments within CI environment.
+- **Review Privileges:** We recommend agencies to periodically review all privileged actions and validate they are legitimate and adhere to the compliance mandates.
+
+### Securing production workloads [#10.1/G5]
+
+- **Runtime Application Self-Protection** (RASP) is an application protection technology which resides within the application&#39;s runtime environment. It secures the application by intercepting all traffic from the app, validating those requests, and ensuring that potential attacks on underlying vulnerabilities are blocked before they are addressed. RASP provides visibility to security teams on the attackers, techniques used, and the applications targeted. RASP tools are easy to include in the pipeline and can be deployed along with the application without additional coding.
+
+## Strategies [#10.1/G2, G3]
+
+The list of deployment strategies is non-exhaustive, and agencies can consider other deployment strategies that may fit their specific use-cases.
+
+| **Strategy** | How it works | Pros & Cons |
+| --- | --- | --- |
+| **Recreate Deployment** | A rudimentary form of deployment where older version of the application is stopped before deploying the new version. | ✓ Simple and cheaper to execute<br />✓ Works well in limited infrastructure <br /><br>☓ Incurs downtime until the new deployment is complete|
+| **Rolling deployment** | A basic deployment strategy where all the instances or nodes within the target environment are incrementally updated with the newer version until completion. | ✓ No downtime for deployment<br />✓ Cloud providers offer automatic roll back for failed deployments<br />✓ Less risky as it is easy to rollback<br />✓ Works well for less complex deployments that do not require capacity testing in production<br /><br>☓ Takes a longer time to complete since it is done incrementally |
+| **Canary releases** | This deployment rolls out new version in the same production environment as the current version and load balancer routes to a subset of users test it and then roll the changes out to the rest of the users. For example, route it to 2%, 25%, 75% and 100% of users in phases. | ✓ Allows verification and testing on live users<br /><br>☓ Potentially complex depending on the duration required for verification and testing in the production environment |
+| **Blue-Green deployment** | This strategy runs two identical production environments, Blue and Green. At a time, only one environment is live and serves production traffic. By default, Blue contains the current application version serving production traffic while Green will contain the newer version which is currently idle. Upon passing a series of customised tests, the Green replaces the Blue and handles production traffic and finally the Blue gets destroyed. | ✓ Reduces the risk of deployment failure and downtime if executed properly<br /><br>☓ Running two identical environments can be costly<br />☓ Additional configuration to maintain data consistency across the two environments |
+
+# Stage 6: Operations & Monitoring
+
+It is vital to implement tools and processes to monitor their production systems and environmentsfor:
+
+- Detecting and responding to operational and security incidents.
+- Measuring impact of the systems to the business. [Note: Agency can refer to the IM8 on Incident Management to determine the impact of the incidents to the business.]
+
+## Factors to evaluate for implementing metrics
+
+There are a few factors which you should evaluate before deciding on the metrics to track:
+
+1. **Resources available for tracking** – Scope tracking based on the resources- manpower, budget, and infrastructure available.
+2. **Usefulness of the metrics** – Track metrics that create value for the team since each additional metric increases the complexity of the system and takes up resources. Use-cases evolve over time, and the agency should constantly evaluate to optimise resources.
+3. **System criticality** – mission critical systems require a more extensive monitoring to ensure the stability. Less critical systems can afford to adopt a more general metrics monitoring as failure is less costly.
+
+## Monitoring metrics
+
+Agency should consider setting up a telemetry dashboard to setup alerts or notifications on anomalous activities. The list of items to monitor is non-exhaustive and should be considered based on the use-case.
+
+### System monitoring
+
+System monitoring evaluates the performance of underlying infrastructure where the servers are hosted. That includes metrics like server uptime, CPU performance, disk space usage and network performance.
+
+### Application Performance Monitoring (APM)
+
+APM observes how well applications perform given the current state of the environment, and how it interacts with the underlying environment and dependencies. APM metrics include success and error rates, application response rates, resource usage and performance, and latency.
+
+### Security monitoring
+
+Security monitoring evaluates the flow of traffic within the application and servers and detects unusual behavior. It also detects activities such as unauthorised privileged processes running in the background, changes in OS or system policies as well as failed login attempts and deletion of audit logs.
+
+### Monitoring systems
+
+Agency can consider using the leading technologies below for their monitoring systems. Do note that the metrics mentioned above are also configurable in dashboards for both data visualisation and alerting purposes within these monitoring systems.
+
+Note that StackOps is a monitoring component under SGTS which is currently in development and expected to be in GA in Q4 FY21. Using StackOps, agencies can configure dashboards to monitor the relevant metrics. Agencies interested to pilot StackOps can email [StackOps\_SRE@tech.gov.sg](mailto:StackOps_SRE@tech.gov.sg).
+
+I. **Prometheus**
+
+Prometheus is an open-source monitoring system which pulls metrics from applications, servers, and other sources.
+
+**Collecting data**
+
+Scrape jobs can be configured to specify endpoints for the Prometheus server to scrape data from. Alternatively, service discovery is an automated way to obtain these endpoints. Applications can provide internal metrics by instrumenting their code using client libraries available in popular languages such as Go, Java, Python and Ruby. For third-party systems, there are many libraries and servers that exports metrics including system, network, and cloud infrastructure metrics.
+
+**Storing data**
+
+Metrics are stored in local storage. You can also configure remote read/write endpoints for data required for longer periods.
+
+**Visualising data**
+
+Prometheus also provides an intuitive user interface to configure custom dashboards using stored metrics, apply functions and preview graphs. An alert manager can be integrated into the Prometheus platform to publish automated alerts for different use-cases.
+
+II. **ELK (Elasticsearch, Logstash, Kibana)**
+
+ELK stack comprises of three open-source tools which are integrated to provide searching, analyzing and visualization of logs generated from various systems.
+
+**Collecting data**
+
+ELK uses beats, which are lightweight agents installed on servers to push metrics varying from application and server logs to network traffic and geospatial data. There are also community-contributed beats which gathers information based on specific use-cases.
+
+**Processing data**
+
+Logstash receives logs and events from various sources/beats, where it processes and parses the data according to the requirements.
+
+**Storing data**
+
+Elasticsearch is the core of the ELK stack, where it provides distributed data storage which can be highly available and fault tolerant. It also specialises in offering various query types for different data types.
+
+**Visualising data**
+
+Kibana is the visualisation tool of the stack which allows users to view aggregable data in customised dashboards. It also provides real-time data visualisation in a user-friendly interface and allows users to configure alerts based on the data received in ELK.
