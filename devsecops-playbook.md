@@ -455,7 +455,7 @@ Following are the optional tests agencies can consider based on their needs and 
 | Disaster Recovery (DR) testing | Public Officers can refer to [DR Test Plan](https://intranet.mof.gov.sg/portal/getattachment/8a76a670-a486-4faf-a442-6e0d8a2ab381/attachment.aspx)[template](https://intranet.mof.gov.sg/portal/getattachment/8a76a670-a486-4faf-a442-6e0d8a2ab381/attachment.aspx) in the intranet. |
 | Chaos testing | Ensures system works and defines a steady state by continuously, but randomly injecting failures in the production system to test the integrity and resiliency of the system and environment. |
 
-# Stage 5: Deployment and Release
+# Stage 5: Deployment & Release
 
 In this section we will look at the best practices on deployment and release safeguards, including the strategies.
 
