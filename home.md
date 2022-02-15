@@ -2,11 +2,19 @@ This is a playbook compiled by engineers and product developers at GovTech for t
 
 We also seek feedback from the Developer Community working on public sectors applications. You can email your feedback and suggestions to ask_codex@tech.gov.sg. 
 
-| Change Summary | Topic |
-| :---| ---- | 
-| 01-12-2021 | <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-5-deployment-amp-release">Stage 5: Deployment & Release </a><br /><a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-6-operations-amp-monitoring">Stage 6: Operations & Monitoring </a>
-| 21-10-2021 | <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-4-pre-release-testing">Stage 4: Pre-release Testing</a>
-| 20-10-2021 | <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-3-building-and-packaging">Stage 3: Building and Packaging</a>
-| 15-09-2021 | <a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=overview">Overview </a><br /><a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-1-planning">Stage 1: Planning </a><br /><a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-2-development-code">Stage 2: Development </a> 
+
+| Table Of Content |
+| :--- | 
+| <a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=overview">Overview </a> |
+<a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-1-planning">Stage 1: Planning </a> |
+| <a href="https://docs.developer.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-2-development-code">Stage 2: Development </a> |
+| <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-3-building-and-packaging">Stage 3: Building and Packaging</a> |
+| <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-4-pre-release-testing">Stage 4: Pre-release Testing</a> |
+| <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-5-deployment-amp-release">Stage 5: Deployment & Release </a> |
+| <a href="https://docs.developer.tech.gov.sg/docs/devsecops-playbook/#/devsecops-playbook?id=stage-6-operations-amp-monitoring">Stage 6: Operations & Monitoring </a> |
+
+
+
 
  
+Last update date: 01-12-2021
