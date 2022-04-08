@@ -526,29 +526,14 @@ Security monitoring evaluates the flow of traffic within the application and ser
 
 ### Monitoring systems
 
-Agency can consider using the leading technologies below for their monitoring systems. Do note that the metrics mentioned above are also configurable in dashboards for both data visualisation and alerting purposes within these monitoring systems.
+Agency can consider using the following cutting-edge technologies for their monitoring systems.  Metrics mentioned earlier can also be configured in dashboards for both data visualisation and alerting purposes within these monitoring systems.
 
-Note that StackOps is a monitoring component under SGTS which is currently in development and expected to be in GA in Q4 FY21. Using StackOps, agencies can configure dashboards to monitor the relevant metrics. Agencies interested to pilot StackOps can email [StackOps\_SRE@tech.gov.sg](mailto:StackOps_SRE@tech.gov.sg).
+StackOps is a monitoring component under SGTS, that agencies can use to configure their dashboards to monitor the relevant metrics. Agencies interested to pilot StackOps can email [StackOps\_SRE@tech.gov.sg](mailto:StackOps_SRE@tech.gov.sg).
 
-I. **Prometheus**
 
-Prometheus is an open-source monitoring system which pulls metrics from applications, servers, and other sources.
+**Elastic stack - Elasticsearch, Logstash, Kibana**
 
-**Collecting data**
-
-Scrape jobs can be configured to specify endpoints for the Prometheus server to scrape data from. Alternatively, service discovery is an automated way to obtain these endpoints. Applications can provide internal metrics by instrumenting their code using client libraries available in popular languages such as Go, Java, Python and Ruby. For third-party systems, there are many libraries and servers that exports metrics including system, network, and cloud infrastructure metrics.
-
-**Storing data**
-
-Metrics are stored in local storage. You can also configure remote read/write endpoints for data required for longer periods.
-
-**Visualising data**
-
-Prometheus also provides an intuitive user interface to configure custom dashboards using stored metrics, apply functions and preview graphs. An alert manager can be integrated into the Prometheus platform to publish automated alerts for different use-cases.
-
-II. **ELK (Elasticsearch, Logstash, Kibana)**
-
-ELK stack comprises of three open-source tools which are integrated to provide searching, analyzing and visualization of logs generated from various systems.
+Elasticsearch, Logstash and Kibana are also known as ELK. This comprises of three open-source tools which are integrated to enable users to search, analyse and visualise logs generated from various systems.
 
 **Collecting data**
 
