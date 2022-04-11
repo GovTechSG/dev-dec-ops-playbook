@@ -495,7 +495,7 @@ The list of deployment strategies is non-exhaustive, and agencies can consider o
 
 # Stage 6: Operations & Monitoring
 
-It is vital to implement tools and processes to monitor their production systems and environmentsfor:
+It is vital to implement tools and processes to monitor their production systems and environments for:
 
 - Detecting and responding to operational and security incidents.
 - Measuring impact of the systems to the business. [Note: Agency can refer to the IM8 on Incident Management to determine the impact of the incidents to the business.]
@@ -522,13 +522,13 @@ APM observes how well applications perform given the current state of the enviro
 
 ### Security monitoring
 
-Security monitoring evaluates the flow of traffic within the application and servers and detects unusual behavior. It also detects activities such as unauthorised privileged processes running in the background, changes in OS or system policies as well as failed login attempts and deletion of audit logs.
+Security monitoring evaluates the flow of traffic within the application and servers and detects unusual behaviour. It also detects activities such as unauthorised privileged processes running in the background, changes in OS or system policies as well as failed login attempts and deletion of audit logs.
 
 ### Monitoring systems
 
 Agency can consider using the following cutting-edge technologies for their monitoring systems.  Metrics mentioned earlier can also be configured in dashboards for both data visualisation and alerting purposes within these monitoring systems.
 
-StackOps is a monitoring component under SGTS, that agencies can use to configure their dashboards to monitor the relevant metrics. Agencies interested to pilot StackOps can email [StackOps\_SRE@tech.gov.sg](mailto:StackOps_SRE@tech.gov.sg).
+StackOps is a monitoring component under SGTS, that agencies can use to configure their dashboards to monitor the relevant metrics. Agencies interested to pilot StackOps can email [StackOps_SRE@tech.gov.sg](mailto:StackOps_SRE@tech.gov.sg).
 
 
 **Elastic stack - Elasticsearch, Logstash, Kibana**
@@ -549,4 +549,4 @@ Elasticsearch is the core of the ELK stack, where it provides distributed data s
 
 **Visualising data**
 
-Kibana is the visualisation tool of the stack which allows users to view aggregable data in customised dashboards. It also provides real-time data visualisation in a user-friendly interface and allows users to configure alerts based on the data received in ELK.
+Kibana is the visualisation tool of the stack which allows users to view agreeable data in customised dashboards. It also provides real-time data visualisation in a user-friendly interface and allows users to configure alerts based on the data received in ELK.
