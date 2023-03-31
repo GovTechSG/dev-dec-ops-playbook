@@ -1,4 +1,4 @@
-# DevSecOps Playbook
+<!--# DevSecOps Playbook
 
 # Overview
 ![](01-devops.png)
@@ -550,3 +550,4 @@ Elasticsearch is the core of the ELK stack, where it provides distributed data s
 **Visualising data**
 
 Kibana is the visualisation tool of the stack which allows users to view agreeable data in customised dashboards. It also provides real-time data visualisation in a user-friendly interface and allows users to configure alerts based on the data received in ELK.
+-->

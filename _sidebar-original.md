@@ -1,2 +1,2 @@
-* [DevSecOps Playbook](devsecops-playbook)
+<!--* [DevSecOps Playbook](devsecops-playbook)-->
 
